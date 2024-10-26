@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO Item Request Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+           
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .form-section {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        .form-section h2 {
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .form-group textarea {
+            height: 120px;
+        }
+
+        .form-group button {
+            background-color: #4caf50;
+            color: white;
+            padding: 12px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+
+        .form-group input[type="file"] {
+            display: none;
+        }
+
+        .file-label {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-weight: 600;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .file-name {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+
+       
+        @media (min-width: 768px) {
+            .form-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+
+            .form-container .form-section {
+                width: 65%;
+            }
+
+            .form-container .image-section {
+                width: 30%;
+            }
+
+            .image-section img {
+                width: 100%;
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page Header -->
+    <header>
+        <div class="container">
+            <h1>NGO Item Request Form</h1>
+        </div>
+    </header>
+
+    <!-- Form Section -->
+    <div class="container form-container">
+        <div class="form-section">
+            <h2>Submit Your Request</h2>
+            <form action="submit-request" method="POST" enctype="multipart/form-data">
+                <!-- NGO Details -->
+                <div class="form-group">
+                    <label for="ngo-name">NGO Name</label>
+                    <input type="text" id="ngo-name" name="ngo-name" placeholder="Enter NGO Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ngo-email">Contact Email</label>
+                    <input type="email" id="ngo-email" name="ngo-email" placeholder="Enter Contact Email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ngo-phone">Contact Phone</label>
+                    <input type="tel" id="ngo-phone" name="ngo-phone" placeholder="Enter Contact Phone Number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ngo-address">NGO Address</label>
+                    <textarea id="ngo-address" name="ngo-address" placeholder="Enter NGO Address" required></textarea>
+                </div>
+
+                <!-- NGO Authentication Details -->
+                <div class="form-group">
+                    <label for="ngo-reg-number">NGO Registration Number</label>
+                    <input type="text" id="ngo-reg-number" name="ngo-reg-number" placeholder="Enter NGO Registration Number" required>
+                </div>
+
+                <!-- <div class="form-group">
+                    <label for="ngo-cert">Upload NGO Certification (PDF or Image)</label>
+                    <label for="ngo-cert" class="file-label">Choose File</label>
+                    <input type="file" id="ngo-cert" name="ngo-cert" accept=".pdf, .jpg, .jpeg, .png" required>
+                    <span class="file-name" id="file-name">No file chosen</span>
+                </div> -->
+
+                <!-- Item Request Details -->
+                <div class="form-group">
+                    <label for="requested-item">Item Requested</label>
+                    <select id="requested-item" name="requested-item" required>
+                        <option value="">Select Item</option>
+                        <option value="Clothes">Clothes</option>
+                        <option value="Medicines">Medicines</option>
+                        <option value="Shoes">Shoes</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="request-description">Item Description/Details</label>
+                    <textarea id="request-description" name="request-description" placeholder="Describe the item being requested" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Submit Request</button>
+                </div>
+            </form>
+        </div>
+
+    
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 NGO Item Request. All Rights Reserved.</p>
+        </div>
+    </footer>
+<!-- 
+    <script>
+        document.getElementById('ngo-cert').addEventListener('change', function() {
+            var fileName = this.files[0].name;
+            document.getElementById('file-name').textContent = fileName;
+        });
+    </script> -->
+
+</body>
+</html>
+

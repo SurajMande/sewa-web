@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            /* max-width: 1200px; */
+            margin: 0 auto;
+            /* padding-top: 20px; */
+        }
+
+        /* Navigation Bar */
+        a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  /* Navigation bar */
+  nav {
+            background-color: #090c0f;
+            padding: 1.7vw;
+            padding-right: 4vw;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        nav a {
+            font-size: 2.4vw;
+            font-weight: 500;
+            letter-spacing: 0.2vw;
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 2vw;
+        }
+
+        nav ul li a {
+            font-size: 1.5vw;
+            color: white;
+        }
+  .container1 {
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.team {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.member {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 22%;
+    text-align: center;
+}
+
+.member img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.member h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.member .position {
+    font-size: 14px;
+    color: #555;
+}
+
+
+        .contact-btn {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-btn:hover {
+            background-color: #555;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        .contact-details {
+            flex-basis: 45%;
+            background-color: #f7f7f7;
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .contact-details h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-details p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .contact-details .contact-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-details .contact-info i {
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        .contact-details .contact-info p {
+            margin: 0;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            flex-basis: 50%;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input, 
+        .contact-form textarea {
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        .contact-form button {
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .contact-form button:hover {
+            background-color: #555;
+        }
+
+        /* Locations Section */
+        .locations {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .locations h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .locations p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .locations-grid img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .location-info {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .location-info h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .location-info p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .stats div {
+            font-size: 24px;
+            color: #333;
+        }
+        .stats div span {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+        /* Footer */
+        footer {
+            padding: 20px 0;
+            background-color: #333;
+             color: white;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        footer .footer-info, footer .footer-links {
+            text-align: left;
+        }
+
+        footer .footer-links {
+            display: flex;
+            gap: 50px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer ul li {
+            margin-bottom: 10px;
+        }
+
+        footer ul li a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.438);
+        }
+        footer p{
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .contact-section {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .contact-details, .contact-form {
+                flex-basis: 100%;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            footer .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="index.html">SeWaa</a>
+            <ul>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+
+        <div class="container1">
+            <h1>Meet our team members</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    
+            <div class="team">
+                <div class="member">
+                    <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Alex Moon">
+                    <h3>Alex Moon</h3>
+                    <p class="position">CEO & Co-Founder</p>
+                </div>
+    
+                <div class="member">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDZ8fHBlcnNvbnxlbnwwfHx8fDE2NzA4MTE5OTk&ixlib=rb-4.0.3&q=80&w=400" alt="Jaxon Voss">
+                    <h3>Jaxon Voss</h3>
+                    <p class="position">CTO & Co-Founder</p>
+                </div>
+    
+                <div class="member">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHBlcnNvbnxlbnwwfHx8fDE2NzA4MTE5OTk&ixlib=rb-4.0.3&q=80&w=400" alt="Mira Frost">
+                    <h3>Mira Frost</h3>
+                    <p class="position">Product Manager</p>
+                </div>
+    
+                <div class="member">
+                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDd8fHBlcnNvbnxlbnwwfHx8fDE2NzA4MTE5OTk&ixlib=rb-4.0.3&q=80&w=400" alt="Kael Orion">
+                    <h3>Kael Orion</h3>
+                    <p class="position">Accountant</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Locations Section -->
+        <section class="locations">
+            <h2>Our locations</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="locations-grid">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1527176930608-09cb256ab504" alt="Headquarters">
+                    <div class="location-info">
+                        <h3>Headquarters</h3>
+                        <p>Chicago, USA</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.pexels.com/photos/16535944/pexels-photo-16535944/free-photo-of-skyscrapers-over-trees-at-central-park.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Regional Office">
+                    <div class="location-info">
+                        <h3>Regional Office</h3>
+                        <p>New York, USA</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2" alt="European Branch">
+                    <div class="location-info">
+                        <h3>European Branch</h3>
+                        <p>Paris, France</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.pexels.com/photos/28927399/pexels-photo-28927399/free-photo-of-traditional-architecture-in-huangshan-china.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Asia-Pacific Office">
+                    <div class="location-info">
+                        <h3>Asia-Pacific Office</h3>
+                        <p>Beijing, China</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div>
+                100+<span>Countries Served</span>
+            </div>
+            <div>
+                120+<span>Years of Experience</span>
+            </div>
+            <div>
+                50+<span>Industry Awards Won</span>
+            </div>
+            <div>
+                98%<span>Customer Satisfaction Rate</span>
+            </div>
+        </section>
+    </div>
+
+    <section class="contact-section">
+        <!-- Contact Details -->
+        <div class="contact-details">
+            <h2>Contact us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="contact-info">
+                <i class="fa fa-envelope"></i>
+                <p>info@dora.run</p>
+            </div>
+            <div class="contact-info">
+                <i class="fa fa-phone"></i>
+                <p>6666 123 4567</p>
+            </div>
+            <div class="contact-info">
+                <i class="fa fa-map-marker"></i>
+                <p>1234 Maple Lane, Apt 56, Springfield, IL 62704, USA</p>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <form action="#">
+                <input type="email" placeholder="Email*" required>
+                <div style="display: flex; gap: 10px;">
+                    <input type="text" placeholder="First Name" required style="flex: 1;">
+                    <input type="text" placeholder="Last Name" required style="flex: 1;">
+                </div>
+                <textarea placeholder="Message" rows="5" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-info">
+            <h3>Logo</h3>
+            <p>Address:<br>1234 Maple Lane, Apt 56, Springfield, IL 62704, USA</p>
+            <p>Contact:<br>6666 123 4567<br>info@dora.run</p>
+            <div>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <div>
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Donate</a></li>
+                    <li><a href="#">Volunteer</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                  <p>&copy; 2024 NGO. All rights reserved.</p>
+            </div>
+            
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookies Settings</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

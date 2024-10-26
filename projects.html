@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work & Connected NGOs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            max-width: 1200px;
+        }
+a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  /* Navigation bar */
+  nav {
+    background-color: #090c0fef;
+    padding: 1.7vw;
+    padding-right: 4vw;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 15vw; */
+    width: 100%;
+
+  }
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  nav a{
+    font-size: 2.4vw;
+    font-weight: 500;
+    letter-spacing: 0.2vw;
+    color: white;
+
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 0 2vw;
+  }
+
+  nav ul li a {
+    padding: 1vw;
+    font-size: 1.5vw;
+    color: white;
+
+  }
+        h1, h2, h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&w=600.jpeg') rgba(0, 0, 0, 0.452);
+            background-position: center;
+            background-size: cover;
+            background-blend-mode: soft-light;
+            padding: 100px 20px;
+            color: white;
+            text-align: center;
+            height: 100%;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        /* Our Work Section */
+        .our-work {
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        .our-work h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .work-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .work-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .work-item h3 {
+            font-size: 24px;
+            padding: 15px;
+        }
+
+        .work-item p {
+            padding: 0 15px 15px;
+            color: #777;
+        }
+
+        /* Connected NGOs Section */
+        .ngos {
+            padding: 50px 20px;
+            background-color: #f4f4f4;
+        }
+
+        .ngos h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .ngos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .ngo-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .ngo-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .ngo-item h3 {
+            font-size: 20px;
+            padding: 15px;
+        }
+
+        .ngo-item p {
+            padding: 0 15px 15px;
+            color: #777;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 50px 20px;
+            background-color: white;
+        }
+
+        .testimonials h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .testimonial-item {
+            background-color: #50484871;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-item h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-item p {
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .testimonial-item span {
+            font-size: 14px;
+            color: #0f0606;
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            padding: 50px 20px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .newsletter p {
+            margin-bottom: 20px;
+        }
+
+        .newsletter form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .newsletter input[type="email"] {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            flex: 1;
+        }
+
+        .newsletter button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .newsletter button:hover {
+            background-color: #ff4949;
+        }
+
+        footer {
+            padding: 20px 0;
+            background-color: #333;
+             color: white;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        footer .footer-info, footer .footer-links {
+            text-align: left;
+        }
+
+        footer .footer-links {
+            display: flex;
+            gap: 50px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer ul li {
+            margin-bottom: 10px;
+        }
+
+        footer ul li a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.438);
+        }
+
+        
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .our-work h2, .ngos h2, .testimonials h2, .newsletter h2 {
+                font-size: 28px;
+            }
+
+            .newsletter input[type="email"], .newsletter button {
+                flex: 1 1 100%;
+            }
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            footer .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav>
+            <a href="index.html">SeWaa</a>
+            <ul>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Our Work and Connected NGOs</h1>
+            <p>We collaborate with amazing NGOs to create impactful solutions. Here’s a glimpse of our journey so far.</p>
+        </div>
+    </section>
+
+    <!-- Our Work Section -->
+    <section class="our-work">
+        <div class="container">
+            <h2>Our Past Projects</h2>
+            <div class="work-grid">
+                <div class="work-item">
+                    <img src="https://images.pexels.com/photos/325521/pexels-photo-325521.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Project 1">
+                    <h3>Project 1</h3>
+                    <p>Providing essential supplies to underprivileged communities across the country.</p>
+                </div>
+                <div class="work-item">
+                    <img src="https://images.pexels.com/photos/6646913/pexels-photo-6646913.jpeg" alt="Project 2">
+                    <h3>Project 2</h3>
+                    <p>Organizing educational programs for children in rural areas.</p>
+                </div>
+                <div class="work-item">
+                    <img src="https://images.pexels.com/photos/3856033/pexels-photo-3856033.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Project 3">
+                    <h3>Project 3</h3>
+                    <p>Facilitating healthcare services for isolated communities.</p>
+                </div>
+                <div class="work-item">
+                    <img src="https://images.pexels.com/photos/761543/pexels-photo-761543.jpeg" alt="Project 4">
+                    <h3>Project 4</h3>
+                    <p>Collaborating with local NGOs to support environmental conservation efforts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connected NGOs Section -->
+    <section class="ngos">
+        <div class="container">
+            <h2>Our Connected NGOs</h2>
+            <div class="ngos-grid">
+                <div class="ngo-item">
+                    <img src="https://images.unsplash.com/photo-1494173853739-c21f58b16055" alt="NGO 1">
+                    <h3>Hope Foundation</h3>
+                    <p>Helping the homeless find shelter and support across the globe.</p>
+                </div>
+                <div class="ngo-item">
+                    <img src="https://images.unsplash.com/photo-1564419320461-6870880221ad" alt="NGO 2">
+                    <h3>Green Earth NGO</h3>
+                    <p>Dedicated to preserving our planet through various environmental initiatives.</p>
+                </div>
+                <div class="ngo-item">
+                    <img src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=600" alt="NGO 3"> 
+                    <h3>Children's Future</h3> 
+                    <p>Supporting education and healthcare for children in underdeveloped regions.</p> 
+                </div> <div class="ngo-item"> 
+                        <img src="https://images.pexels.com/photos/339620/pexels-photo-339620.jpeg?auto=compress&cs=tinysrgb&w=600" alt="NGO 4"> <h3>Healthcare for All</h3> <p>Providing medical supplies and healthcare access to remote communities.</p> </div> </div> </div> </section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <div class="container">
+        <h2>What Our Partners Say</h2>
+        <div class="testimonial-item">
+            <h3>Jane Doe, Hope Foundation</h3>
+            <p>"Working with this platform has been an incredible experience. Their dedication to making a difference is truly inspiring. We've been able to reach more people in need thanks to their support."</p>
+            <span>— Jane Doe, NGO Partner</span>
+        </div>
+        <div class="testimonial-item">
+            <h3>John Smith, Green Earth NGO</h3>
+            <p>"Their commitment to environmental causes aligns perfectly with our mission. Together, we've organized tree plantation drives that have had a significant impact."</p>
+            <span>— John Smith, NGO Partner</span>
+        </div>
+        <div class="testimonial-item">
+            <h3>Emily Brown, Children's Future</h3>
+            <p>"Our collaboration has allowed us to provide better educational resources to children in rural areas. We're excited to continue our partnership for future projects."</p>
+            <span>— Emily Brown, NGO Partner</span>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter">
+    <div class="container">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter for updates on new projects and NGO collaborations.</p>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+        <div class="footer-info">
+            <h3>Logo</h3>
+            <p>Address:<br>1234 Maple Lane, Apt 56, Springfield, IL 62704, USA</p>
+            <p>Contact:<br>6666 123 4567<br>info@dora.run</p>
+            <div>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <div>
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Donate</a></li>
+                    <li><a href="#">Volunteer</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                  <p>&copy; 2024 NGO. All rights reserved.</p>
+            </div>
+            
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookies Settings</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

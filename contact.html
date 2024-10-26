@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  /* Navigation bar */
+  nav {
+    margin: 0 auto;
+    background-color: #090c0fef;
+    padding: 1.7vw;
+    padding-right: 4vw;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 15vw; */
+    width: 100%;
+  }
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  nav a{
+    font-size: 2.4vw;
+    font-weight: 500;
+    letter-spacing: 0.2vw;
+    color: white;
+
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 0 2vw;
+  }
+
+  nav ul li a {
+    padding: 1vw;
+    font-size: 1.5vw;
+    color: white;
+
+  }
+        .contact-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .contact-header h1 {
+            font-size: 36px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .contact-header p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        .contact-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            width: 30%;
+            min-width: 250px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .contact-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .contact-card p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .contact-card i {
+            font-size: 30px;
+            color: #3aafa9;
+            margin-bottom: 10px;
+        }
+
+        .contact-images {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .contact-image img {
+            width: 32%;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            margin-top: 40px;
+        }
+
+        .contact-form h2 {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .contact-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            background-color: #000000b6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: #0000008c;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-top: 40px;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .faq-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            cursor: pointer;
+            padding: 20px;
+            background-color: #000000b6;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .faq-question:hover {
+            background-color: #0000008a;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 20px;
+            background-color: #f9f9f9;
+            font-size: 16px;
+            color: #555;
+        }
+
+        footer {
+            padding: 20px 0;
+            background-color: #333;
+             color: white;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        footer .footer-info, footer .footer-links {
+            text-align: left;
+        }
+
+        footer .footer-links {
+            display: flex;
+            gap: 50px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer ul li {
+            margin-bottom: 10px;
+        }
+
+        footer ul li a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.438);
+        }
+
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-details {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-card {
+                width: 100%;
+            }
+
+            .contact-image img {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            footer .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">SeWaa</a>
+        <ul>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    <div class="contact-container">
+
+        <!-- Header Section -->
+        <div class="contact-header">
+            <h1>Contact Us</h1>
+            <p>We are here to assist you. Feel free to reach out through any of the options below.</p>
+        </div>
+
+        <!-- Contact Details Section -->
+        <div class="contact-details">
+            <div class="contact-card">
+                <i class="fa fa-map-marker"></i>
+                <h3>Visit Us</h3>
+                <p>NGO Street, City, Country</p>
+            </div>
+
+            <div class="contact-card">
+                <i class="fa fa-envelope"></i>
+                <h3>Email Us</h3>
+                <p>support@ngoexample.com</p>
+            </div>
+
+            <div class="contact-card">
+                <i class="fa fa-phone"></i>
+                <h3>Call Us</h3>
+                <p>+123 456 7890</p>
+            </div>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="contact-form">
+            <h2>Get In Touch</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="contact-btn">Send Message</button>
+            </form>
+        </div>
+
+       
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">How can I donate items?</div>
+                <div class="faq-answer">You can donate items by navigating to our shop section, selecting a category like clothes, shoes, or medicines, and following the donation process. The NGOs will make requests based on the need, and you can fulfill their requests by donating accordingly.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What type of items can I donate?</div>
+                <div class="faq-answer">You can donate extra clothes, shoes, medicines (within expiration limits), and other unused items that can help NGOs and child organizations. We ensure the items go to the right people in need.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I contact a specific NGO?</div>
+                <div class="faq-answer">To contact a specific NGO, you can visit the NGO section on our website and choose the organization you're interested in.Their contact details and methods to connect with them will be displayed. You can reach out to them directly through the provided phone number or email address.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I donate internationally?</div>
+                <div class="faq-answer">Yes, we accept international donations. You can contribute regardless of your location. We work with NGOs globally, so your donations will reach the right beneficiaries no matter where you are.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Are my donations tax-deductible?</div>
+                <div class="faq-answer">Most donations are tax-deductible, depending on the laws in your country. After making a donation, you can request a receipt that may be used for tax purposes. Please consult a tax professional for specific details.</div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-info">
+            <h3>Logo</h3>
+            <p>Address:<br>1234 Maple Lane, Apt 56, Springfield, IL 62704, USA</p>
+            <p>Contact:<br>6666 123 4567<br>info@dora.run</p>
+            <div>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <div>
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Donate</a></li>
+                    <li><a href="#">Volunteer</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                  <p>&copy; 2024 NGO. All rights reserved.</p>
+            </div>
+            
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookies Settings</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Script
+        document.querySelectorAll('.faq-question').forEach((item) => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                } else {
+                    answer.style.display = 'block';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+	
